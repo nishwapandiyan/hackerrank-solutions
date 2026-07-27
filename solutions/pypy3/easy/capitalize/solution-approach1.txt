@@ -1,0 +1,24 @@
+# ──────────────────────────────────────────────────
+# Link        https://www.hackerrank.com/challenges/capitalize/problem?isFullScreen=true
+# Problem     Capitalize!
+# Difficulty  Easy
+# Subdomain   Strings
+# Platform    HackerRank
+# Language    pypy3
+# Status      Accepted
+# Submitted   2026-06-30, 12:59 p.m.
+# ──────────────────────────────────────────────────
+
+
+
+# Complete the solve function below.
+def solve(s):
+    tr = re.split(r'( )', s)
+    res = ""
+    for val in tr:
+        if val != ' ':
+          res+=val.capitalize()
+        else:
+            res+=val 
+    return res
+    # print(tr)
