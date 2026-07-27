@@ -1,0 +1,16 @@
+# ──────────────────────────────────────────────────
+# Link        https://www.hackerrank.com/challenges/itertools-combinations-with-replacement/problem?isFullScreen=true
+# Problem     itertools.combinations_with_replacement()
+# Difficulty  Easy
+# Subdomain   Itertools
+# Platform    HackerRank
+# Language    pypy3
+# Status      Accepted
+# Submitted   2026-07-07, 12:39 p.m.
+# ──────────────────────────────────────────────────
+
+from itertools import combinations_with_replacement
+s,v = input().split()
+v = int(v)
+for c in combinations_with_replacement(sorted(s),v):
+    print(''.join(c))
