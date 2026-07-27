@@ -1,0 +1,19 @@
+# ──────────────────────────────────────────────────
+# Link        https://www.hackerrank.com/challenges/itertools-permutations/problem?isFullScreen=true
+# Problem     itertools.permutations()
+# Difficulty  Easy
+# Subdomain   Itertools
+# Platform    HackerRank
+# Language    pypy3
+# Status      Accepted
+# Submitted   2026-07-03, 12:03 p.m.
+# ──────────────────────────────────────────────────
+
+from itertools import permutations
+
+s ,v= map(str,input().split())
+v= int(v)
+val = ''.join(sorted(s))
+p = permutations(val,v)
+for i in p:
+    print(''.join(i))
