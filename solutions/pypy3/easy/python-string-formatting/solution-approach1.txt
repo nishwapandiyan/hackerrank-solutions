@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-07-02, 12:17 p.m.
+# Technique   string-formatting-with-width-padding
+# Time        O(n * log n)
+# Space       O(log n)
+# Insight     The implementation calculates the required padding width based on the binary representation of the maximum number and applies right-justification to each formatted string representation.
+# Interview   Before: "I would manually calculate the binary length and use string concatenation." After: "I used the built-in rjust method with a pre-calculated width to ensure O(n log n) time complexity, where log n is the number of bits in the maximum integer."
+# Pitfalls    (1) Failing to subtract two from the binary string length, which includes the '0b' prefix.  (2) Using incorrect padding width by failing to account for the binary representation of the maximum number.  (3) Forgetting to convert hexadecimal characters to uppercase as required by the problem statement.
 # ──────────────────────────────────────────────────
 
 def print_formatted(number):
