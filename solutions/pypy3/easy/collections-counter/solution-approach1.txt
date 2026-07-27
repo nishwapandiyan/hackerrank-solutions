@@ -7,12 +7,6 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-04-08, 01:34 p.m.
-# Technique   hash-map-frequency-counter
-# Time        O(X + N)
-# Space       O(X)
-# Insight     The solution maintains a frequency map of available shoe sizes and decrements the count only when a customer's requested size is available, ensuring each shoe is sold at most once.
-# Interview   Before: "I would iterate through the list of customers and check the inventory for each request." After: "Using a Counter hash map allows O(1) lookup and update per customer, resulting in O(X + N) total time complexity where X is the number of shoes and N is the number of customers."
-# Pitfalls    (1) Failing to check if the shoe count is greater than zero before decrementing, which would allow negative inventory.  (2) Assuming the input size is always present in the Counter, which would return zero instead of raising a KeyError if not handled correctly.
 # ──────────────────────────────────────────────────
 
 from collections import Counter
