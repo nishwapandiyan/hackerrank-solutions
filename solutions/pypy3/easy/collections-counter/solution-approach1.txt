@@ -1,0 +1,29 @@
+# ──────────────────────────────────────────────────
+# Link        https://www.hackerrank.com/challenges/collections-counter/problem?isFullScreen=true
+# Problem     collections.Counter()
+# Difficulty  Easy
+# Subdomain   Collections
+# Platform    HackerRank
+# Language    pypy3
+# Status      Accepted
+# Submitted   2026-04-08, 01:34 p.m.
+# ──────────────────────────────────────────────────
+
+from collections import Counter
+
+shoes = int(input())
+shoe_sizes = list(map(int,input().split(" ")))
+
+shoc_sizes = Counter(shoe_sizes)
+
+customers = int(input())
+total = 0
+
+for i in range(customers):
+    size,price = map(int,input().split(" "))
+    
+    if(shoc_sizes[size] > 0):
+      total += price
+      shoc_sizes[size] -= 1
+    
+print(total)        
