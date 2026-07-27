@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-06-30, 12:59 p.m.
+# Technique   regex-split-capitalize-reconstruction
+# Time        O(N)
+# Space       O(N)
+# Insight     The implementation uses a capturing group in regex to preserve whitespace delimiters, allowing each word to be processed individually via the capitalize method while maintaining the original string structure.
+# Interview   Before: "I could use title() to capitalize the string." After: "The title() method fails on inputs like '12abc' because it capitalizes letters following numbers, whereas this O(N) approach correctly preserves the original casing for non-alphabetic characters as required by the problem statement."
+# Pitfalls    (1) Using the built-in string.title() method incorrectly capitalizes characters following numbers, violating the requirement that only the first character of a word is capitalized.  (2) Failing to preserve original whitespace characters when splitting the string, which would prevent the reconstruction of the full name with correct spacing.
 # ──────────────────────────────────────────────────
 
 
