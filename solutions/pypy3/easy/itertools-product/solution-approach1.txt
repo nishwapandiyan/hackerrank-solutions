@@ -1,0 +1,25 @@
+# ──────────────────────────────────────────────────
+# Link        https://www.hackerrank.com/challenges/itertools-product/problem?isFullScreen=true
+# Problem     itertools.product()
+# Difficulty  Easy
+# Subdomain   Itertools
+# Platform    HackerRank
+# Language    pypy3
+# Status      Accepted
+# Submitted   2026-07-02, 12:32 p.m.
+# ──────────────────────────────────────────────────
+
+from itertools import product
+
+def getProduct(l1,l2):
+    return product(l1,l2)
+    
+    
+if __name__ == "__main__":
+     l1 = list(map(int,input().split()))
+     l2 = list(map(int,input().split()))
+     
+     res = getProduct(l1,l2)
+     
+     for val in res:
+        print(val,end=' ')
