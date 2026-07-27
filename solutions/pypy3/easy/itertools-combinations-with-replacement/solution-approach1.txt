@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-07-07, 12:39 p.m.
+# Technique   itertools-combinations-with-replacement
+# Time        O(N^r)
+# Space       O(r)
+# Insight     The solution leverages the lexicographical property of sorted input strings to generate combinations with replacement in the required order.
+# Interview   Before: "How would you generate all combinations with replacement?" After: "I would use itertools.combinations_with_replacement on a sorted string, which runs in O(N^r) time, where N is the string length and r is the combination size, ensuring lexicographical output as required."
+# Pitfalls    (1) Failing to sort the input string results in combinations that are not in lexicographical order.  (2) Treating the input integer as a string instead of casting it to an int causes a TypeError in the combinations function.
 # ──────────────────────────────────────────────────
 
 from itertools import combinations_with_replacement
