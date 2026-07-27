@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-07-02, 12:32 p.m.
+# Technique   itertools-cartesian-product
+# Time        O(N * M)
+# Space       O(1)
+# Insight     The itertools.product function generates the Cartesian product of input iterables by effectively performing nested loops over the provided sequences.
+# Interview   Before: "I would write nested loops to iterate through both lists and append tuples to a result list." After: "Using itertools.product is more idiomatic and memory-efficient, yielding an O(N * M) time complexity where N and M are the lengths of the input lists."
+# Pitfalls    (1) Failing to unpack the result of product into a list or print it correctly as space-separated tuples.  (2) Assuming the output is a list when it is actually an iterator object.
 # ──────────────────────────────────────────────────
 
 from itertools import product
