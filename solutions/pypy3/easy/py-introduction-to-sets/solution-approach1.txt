@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-07-08, 10:20 p.m.
+# Technique   set-deduplication-average
+# Time        O(N)
+# Space       O(N)
+# Insight     The implementation converts the input list into a set to eliminate duplicate values, then calculates the arithmetic mean using the sum and count of the unique elements.
+# Interview   Before: "How would you calculate the average of unique elements in a list?" After: "I use a set to filter duplicates in O(N) time and O(N) space, then divide the sum by the length of the set to get the average."
+# Pitfalls    (1) The division by zero error occurs if the input array is empty, as the set length will be zero.  (2) The requirement to round to 3 decimal places is not handled by the function return value, potentially causing output format mismatches.
 # ──────────────────────────────────────────────────
 
 def average(array):
