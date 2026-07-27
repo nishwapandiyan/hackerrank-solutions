@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-07-03, 12:03 p.m.
+# Technique   itertools-permutations-lexicographical-sort
+# Time        O(N! / (N-K)!)
+# Space       O(N)
+# Insight     The code sorts the input string before generating permutations to ensure the output follows lexicographical order as required by the itertools documentation.
+# Interview   Before: "How do I generate permutations in a specific order?" After: "By sorting the input string first, itertools.permutations produces results in lexicographical order. The time complexity is O(N! / (N-K)!) because it generates all possible permutations of length K from N elements."
+# Pitfalls    (1) Failing to sort the input string results in permutations that are not in lexicographical order.  (2) Forgetting to join the tuple elements returned by permutations results in output containing parentheses and commas instead of plain strings.
 # ──────────────────────────────────────────────────
 
 from itertools import permutations
