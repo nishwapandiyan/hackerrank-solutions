@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-07-08, 10:35 p.m.
+# Technique   symmetric-difference-operator
+# Time        O(M log M + N log N)
+# Space       O(M + N)
+# Insight     The symmetric difference operator computes the set of elements present in either set but not both, which is then sorted to satisfy the ascending order requirement.
+# Interview   Before: "I would iterate through both sets and manually check for membership." After: "Using the XOR operator on sets provides an O(M+N) symmetric difference, followed by an O(K log K) sort, where K is the number of unique elements in the result."
+# Pitfalls    (1) Failing to sort the resulting set, as the symmetric difference operator returns an unordered collection.  (2) Assuming the input sets are already sorted, which is not guaranteed by the set data structure.  (3) Neglecting to convert the input strings to integers, which would result in lexicographical rather than numerical sorting.
 # ──────────────────────────────────────────────────
 
 m = int(input())
