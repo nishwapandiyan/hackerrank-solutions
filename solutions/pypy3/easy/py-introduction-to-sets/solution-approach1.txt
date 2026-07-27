@@ -1,0 +1,14 @@
+# ──────────────────────────────────────────────────
+# Link        https://www.hackerrank.com/challenges/py-introduction-to-sets/problem?isFullScreen=true
+# Problem     Introduction to Sets
+# Difficulty  Easy
+# Subdomain   Sets
+# Platform    HackerRank
+# Language    pypy3
+# Status      Accepted
+# Submitted   2026-07-08, 10:20 p.m.
+# ──────────────────────────────────────────────────
+
+def average(array):
+    return sum(set(array))/len(set(array))
+
