@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-07-07, 12:33 p.m.
+# Technique   itertools-combinations-lexicographical-sort
+# Time        O(k * nCk)
+# Space       O(n)
+# Insight     The implementation sorts the input string to ensure that itertools.combinations emits subsequences in lexicographical order for each length from one up to k.
+# Interview   Before: "How do I generate all combinations of a string in sorted order?" After: "You sort the string first, then iterate from length 1 to k using itertools.combinations. This approach runs in O(k * nCk) time, ensuring each combination is printed in the required lexicographical sequence."
+# Pitfalls    (1) Failing to sort the input string before passing it to combinations, which violates the lexicographical order requirement.  (2) Using range(v) instead of range(1, v + 1), which misses combinations of length v.  (3) Forgetting to join the tuple returned by combinations into a string, resulting in incorrect output formatting.
 # ──────────────────────────────────────────────────
 
 from itertools import combinations
