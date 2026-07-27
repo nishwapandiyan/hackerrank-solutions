@@ -1,0 +1,18 @@
+# ──────────────────────────────────────────────────
+# Link        https://www.hackerrank.com/challenges/symmetric-difference/problem?isFullScreen=true
+# Problem     Symmetric Difference
+# Difficulty  Easy
+# Subdomain   Sets
+# Platform    HackerRank
+# Language    pypy3
+# Status      Accepted
+# Submitted   2026-07-08, 10:35 p.m.
+# ──────────────────────────────────────────────────
+
+m = int(input())
+a = set(list(map(int,input().split())))
+n = int(input())
+b = set(list(map(int,input().split())))
+
+for i in sorted(b^a):
+    print(i)
