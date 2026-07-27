@@ -1,0 +1,17 @@
+# ──────────────────────────────────────────────────
+# Link        https://www.hackerrank.com/challenges/itertools-combinations/problem?isFullScreen=true
+# Problem     itertools.combinations()
+# Difficulty  Easy
+# Subdomain   Itertools
+# Platform    HackerRank
+# Language    pypy3
+# Status      Accepted
+# Submitted   2026-07-07, 12:33 p.m.
+# ──────────────────────────────────────────────────
+
+from itertools import combinations
+s,v = input().split()
+v = int(v)
+for i in range(1,v+1):
+    for val in combinations(sorted(s),i):
+        print(''.join(val))
