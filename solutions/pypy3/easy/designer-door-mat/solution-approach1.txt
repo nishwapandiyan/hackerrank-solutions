@@ -1,0 +1,22 @@
+# ──────────────────────────────────────────────────
+# Link        https://www.hackerrank.com/challenges/designer-door-mat/problem?isFullScreen=true
+# Problem     Designer Door Mat
+# Difficulty  Easy
+# Subdomain   Strings
+# Platform    HackerRank
+# Language    pypy3
+# Status      Accepted
+# Submitted   2026-06-30, 12:21 p.m.
+# ──────────────────────────────────────────────────
+
+n,m = map(int,input().split())
+
+for i in range(n//2):
+    pat = ".|." * (2*i+1)
+    print(pat.center(m,'-'))
+    
+print("WELCOME".center(m,'-'))
+    
+for i in range(n//2-1,-1,-1):
+    pat = ".|." * (2*i+1)
+    print(pat.center(m,'-'))    
