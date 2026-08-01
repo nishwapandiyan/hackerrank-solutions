@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-03-09, 05:46 p.m.
+# Technique   conditional-branching-logic
+# Time        O(1)
+# Space       O(1)
+# Insight     The code evaluates the parity and magnitude of the integer n to determine the output based on four mutually exclusive conditional branches.
+# Interview   Before: "I would use a series of nested if-else statements to check the parity and range constraints." After: "The implementation uses O(1) time and space to map the input n to the required output, correctly handling the inclusive range boundaries specified in the problem."
+# Pitfalls    (1) Failing to use inclusive range checks for the 2 to 5 and 6 to 20 intervals.  (2) Incorrectly ordering the conditional checks, which could lead to overlapping logic for even numbers.  (3) Neglecting the requirement that odd numbers are always Weird regardless of their magnitude.
 # ──────────────────────────────────────────────────
 
 #!/bin/python3
