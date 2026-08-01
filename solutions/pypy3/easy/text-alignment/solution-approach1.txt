@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-03-11, 07:31 p.m.
+# Technique   string-alignment-formatting
+# Time        O(thickness^2)
+# Space       O(thickness)
+# Insight     The logo is constructed by concatenating string-aligned segments of varying widths based on the input thickness parameter.
+# Interview   Before: "How do I handle variable spacing in ASCII art?" After: "I use Python's string alignment methods rjust, ljust, and center to maintain consistent padding, resulting in O(thickness^2) time complexity to print the full logo structure."
+# Pitfalls    (1) Incorrectly calculating the total width for center alignment leads to misaligned logo segments.  (2) Failing to account for the odd-number constraint on thickness causes visual distortion in the final output.  (3) Using incorrect padding characters instead of the default space character breaks the required logo shape.
 # ──────────────────────────────────────────────────
 
 thickness = int(input())
