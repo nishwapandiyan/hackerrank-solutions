@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-03-10, 06:10 p.m.
+# Technique   set-sorting-and-filtering
+# Time        O(N log N)
+# Space       O(N)
+# Insight     The algorithm identifies the second lowest grade by extracting unique scores into a sorted set and then filters the original list for students matching that specific value.
+# Interview   Before: "How would you find the second lowest value in a list?" After: "I would use a set to extract unique values, sort them, and pick the index at 1. This approach runs in O(N log N) time, which is efficient for handling N students while ensuring alphabetical output."
+# Pitfalls    (1) Assuming the second lowest grade is always at index 1 without verifying the input contains at least two unique grades.  (2) Failing to sort the final list of names alphabetically before printing, as required by the problem statement.  (3) Using a list instead of a set to find unique grades, which would incorrectly identify the second lowest grade if the lowest grade appears multiple times.
 # ──────────────────────────────────────────────────
 
 if __name__ == '__main__':
