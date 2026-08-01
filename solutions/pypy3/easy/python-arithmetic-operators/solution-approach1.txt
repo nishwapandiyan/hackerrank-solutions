@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-03-09, 05:47 p.m.
+# Technique   basic-arithmetic-input-output
+# Time        O(1)
+# Space       O(1)
+# Insight     The program performs standard arithmetic operations on two integers read from standard input and prints the results sequentially.
+# Interview   Before: "How do I handle basic arithmetic in Python?" After: "You use the standard operators +, -, and * on integer inputs. This approach runs in O(1) time and space, effectively handling any two integers provided by the user."
+# Pitfalls    (1) Failing to convert input strings to integers using int() before performing arithmetic operations.  (2) Assuming the input format provides both integers on a single line when the problem specifies two separate lines.
 # ──────────────────────────────────────────────────
 
 if __name__ == '__main__':
