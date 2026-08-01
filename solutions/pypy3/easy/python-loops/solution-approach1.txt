@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-03-09, 05:51 p.m.
+# Technique   range-based-iteration
+# Time        O(n)
+# Space       O(1)
+# Insight     The code iterates through all non-negative integers i strictly less than n, calculating and printing the square of each integer sequentially.
+# Interview   Before: "How would you print the squares of all integers from 0 up to n-1?" After: "I would use a range-based loop to iterate from 0 to n-1, printing the square of each index. This approach runs in O(n) time and O(1) space, correctly handling the constraint i < n."
+# Pitfalls    (1) Using range(n + 1) instead of range(n) would include n squared, violating the constraint i < n.  (2) Assuming the input n could be negative without handling the range behavior, though the problem specifies non-negative integers.
 # ──────────────────────────────────────────────────
 
 if __name__ == '__main__':
