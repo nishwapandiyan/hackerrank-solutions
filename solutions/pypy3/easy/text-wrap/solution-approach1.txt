@@ -1,0 +1,17 @@
+# ──────────────────────────────────────────────────
+# Link        https://www.hackerrank.com/challenges/text-wrap/problem?isFullScreen=true
+# Problem     Text Wrap
+# Difficulty  Easy
+# Subdomain   Strings
+# Platform    HackerRank
+# Language    pypy3
+# Status      Accepted
+# Submitted   2026-03-11, 09:01 p.m.
+# ──────────────────────────────────────────────────
+
+
+
+def wrap(string, max_width):
+    result = textwrap.wrap(string, width=max_width)
+    return "\n".join(result)
+
