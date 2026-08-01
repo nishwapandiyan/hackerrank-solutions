@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-03-09, 05:32 p.m.
+# Technique   standard-output-print
+# Time        O(1)
+# Space       O(1)
+# Insight     The program executes a single print statement to output the required string literal to the standard output stream.
+# Interview   Before: "How do I output text in Python?" After: "You use the print function, which operates in O(1) time and space, to send the string to stdout as required by the problem constraints."
+# Pitfalls    (1) Incorrect capitalization or punctuation of the string literal violates the exact output format requirement.  (2) Including unnecessary whitespace or extra characters in the print statement will cause a mismatch with the expected output.
 # ──────────────────────────────────────────────────
 
 if __name__ == '__main__':
