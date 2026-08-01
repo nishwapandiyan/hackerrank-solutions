@@ -1,0 +1,20 @@
+# ──────────────────────────────────────────────────
+# Link        https://www.hackerrank.com/challenges/write-a-function/problem?isFullScreen=true
+# Problem     Write a function
+# Difficulty  Medium
+# Subdomain   Introduction
+# Platform    HackerRank
+# Language    pypy3
+# Status      Accepted
+# Submitted   2026-03-09, 09:45 p.m.
+# ──────────────────────────────────────────────────
+
+def is_leap(year):
+    leap = False
+    
+    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+        
+        leap = True
+    
+    return leap
+
