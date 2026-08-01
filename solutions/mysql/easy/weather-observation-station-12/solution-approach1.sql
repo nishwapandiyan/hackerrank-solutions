@@ -7,6 +7,12 @@
 -- Language    mysql
 -- Status      Accepted
 -- Submitted   2026-04-05, 08:56 a.m.
+-- Technique   regex-free-string-filtering
+-- Time        O(N)
+-- Space       O(N)
+-- Insight     The query filters unique city names by verifying that both the first and last characters are absent from the set of vowels using string functions.
+-- Interview   Before: "How would you filter strings based on character positions?" After: "I use LEFT and RIGHT functions to isolate boundary characters, ensuring O(N) time complexity while satisfying the distinct requirement to exclude duplicates."
+-- Pitfalls    (1) Failing to account for case sensitivity if the database collation is case-sensitive.  (2) Assuming the city name length is always greater than one, though the logic holds for single-character names.
 -- ──────────────────────────────────────────────────
 
 /*
