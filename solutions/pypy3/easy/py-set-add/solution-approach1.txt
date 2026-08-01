@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-03-09, 10:22 p.m.
+# Technique   set-insertion-counting
+# Time        O(N)
+# Space       O(N)
+# Insight     The implementation utilizes a hash set to automatically handle duplicate entries while maintaining a collection of unique country names.
+# Interview   Before: "I would iterate through the list and check if each item exists in a new list before adding it." After: "Using a set provides O(1) average time complexity for insertions, resulting in an O(N) total time complexity to count N distinct stamps."
+# Pitfalls    (1) Assuming the .add() method returns the updated set instead of None, which could lead to errors if the return value is assigned to a variable.  (2) Failing to account for the O(N) space complexity required to store all unique country names in the set.
 # ──────────────────────────────────────────────────
 
 n = int(input())
