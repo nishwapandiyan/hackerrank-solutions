@@ -7,6 +7,12 @@
 -- Language    mysql
 -- Status      Accepted
 -- Submitted   2026-04-07, 01:45 p.m.
+-- Technique   aggregate-sum-filter
+-- Time        O(N)
+-- Space       O(1)
+-- Insight     The query filters the dataset by the specific country code 'JPN' and computes the total population using the aggregate sum function.
+-- Interview   Before: "How would you calculate the total population for a specific country?" After: "I would use the SUM aggregate function combined with a WHERE clause to filter by the country code, resulting in O(N) time complexity where N is the number of rows in the table."
+-- Pitfalls    (1) Failing to use the exact string literal 'JPN' as specified in the problem requirements.  (2) Using an incorrect column name instead of 'population' or 'countrycode' as defined in the schema.
 -- ──────────────────────────────────────────────────
 
 select sum(population) from city where countrycode = 'jpn';
