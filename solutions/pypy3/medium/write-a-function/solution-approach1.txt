@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-03-09, 09:45 p.m.
+# Technique   boolean-logic-conditional
+# Time        O(1)
+# Space       O(1)
+# Insight     The function evaluates the Gregorian calendar leap year rules by checking if the year is divisible by 400 or divisible by 4 while not being divisible by 100.
+# Interview   Before: "I should check divisibility by 4, 100, and 400 using nested if-statements." After: "I can simplify the logic into a single boolean expression, which runs in O(1) time and handles the Gregorian leap year conditions efficiently."
+# Pitfalls    (1) Incorrectly prioritizing the divisibility by 100 rule over the divisibility by 400 rule.  (2) Failing to use the logical OR operator to correctly include years divisible by 400 as leap years.
 # ──────────────────────────────────────────────────
 
 def is_leap(year):
