@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-03-10, 10:01 p.m.
+# Technique   command-pattern-list-dispatch
+# Time        O(N * M) where M is the average list op…
+# Space       O(M) where M is the number of elements …
+# Insight     The implementation maps each input command string directly to the corresponding built-in Python list method to maintain the list state.
+# Interview   Before: "How would you handle dynamic list operations?" After: "I use a command-pattern dispatch to execute list methods like insert or sort. This approach is O(N * M) overall, where N is the number of commands and M is the list size, ensuring efficient handling of all seven required operations."
+# Pitfalls    (1) The remove method raises a ValueError if the specified integer is not present in the list.  (2) The pop method raises an IndexError if called on an empty list.  (3) The insert method index parameter is not bounds-checked, potentially appending to the end if the index exceeds the current list length.
 # ──────────────────────────────────────────────────
 
 if __name__ == '__main__':
