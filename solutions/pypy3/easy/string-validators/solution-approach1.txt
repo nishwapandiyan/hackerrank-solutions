@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-03-11, 06:09 p.m.
+# Technique   generator-expression-any-check
+# Time        O(N)
+# Space       O(1)
+# Insight     The implementation uses generator expressions with the any() function to perform short-circuiting existence checks for each character property across the entire string.
+# Interview   Before: "I would iterate through the string and maintain five boolean flags." After: "Using any() with generator expressions is more idiomatic and efficient, achieving O(N) time complexity by stopping as soon as a match is found for each condition."
+# Pitfalls    (1) Confusing the any() method with the all() method, which would incorrectly require every character in the string to satisfy the condition.  (2) Assuming the string methods check the entire string rather than individual characters, which would lead to incorrect results for mixed-content strings.
 # ──────────────────────────────────────────────────
 
 if __name__ == '__main__':
