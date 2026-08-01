@@ -1,0 +1,13 @@
+# ──────────────────────────────────────────────────
+# Link        https://www.hackerrank.com/challenges/py-hello-world/problem?isFullScreen=true
+# Problem     Say "Hello, World!" With Python
+# Difficulty  Easy
+# Subdomain   Introduction
+# Platform    HackerRank
+# Language    pypy3
+# Status      Accepted
+# Submitted   2026-03-09, 05:32 p.m.
+# ──────────────────────────────────────────────────
+
+if __name__ == '__main__':
+    print("Hello, World!")
