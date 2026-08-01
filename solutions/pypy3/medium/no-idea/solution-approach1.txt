@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-03-09, 10:16 p.m.
+# Technique   hash-set-lookup-summation
+# Time        O(n + m)
+# Space       O(n + m)
+# Insight     The algorithm iterates through the array once, performing constant-time membership checks against two pre-populated hash sets to update the total happiness score.
+# Interview   Before: "I would iterate through the array and check each element against both sets using list membership." After: "Using hash sets reduces lookup time to O(1), making the total complexity O(n + m) instead of O(n * m), which is necessary given the 10^5 constraints."
+# Pitfalls    (1) Using a list instead of a set for A or B results in O(n * m) time complexity, which exceeds the time limit for 10^5 constraints.  (2) Failing to account for the disjoint property of sets A and B could lead to incorrect logic if an element were present in both.
 # ──────────────────────────────────────────────────
 
 n, m = list(map(int, input().split()))
