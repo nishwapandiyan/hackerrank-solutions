@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-03-11, 09:01 p.m.
+# Technique   textwrap-library-utilization
+# Time        O(N)
+# Space       O(N)
+# Insight     The implementation leverages the standard library's textwrap module to partition the input string into segments of at most max_width characters, which are then joined by newline characters.
+# Interview   Before: "I would manually iterate through the string and slice it every max_width characters." After: "Using textwrap.wrap is more idiomatic and efficient, operating in O(N) time where N is the string length, while correctly handling the specified width constraints."
+# Pitfalls    (1) Relying on external libraries might be restricted in some specific interview environments.  (2) The textwrap module may behave differently than a manual implementation if the input string contains existing whitespace or special characters.
 # ──────────────────────────────────────────────────
 
 
