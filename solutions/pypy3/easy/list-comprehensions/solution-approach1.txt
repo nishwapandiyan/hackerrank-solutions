@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-03-10, 05:43 p.m.
+# Technique   list-comprehension-nested-iteration
+# Time        O(x * y * z)
+# Space       O(x * y * z)
+# Insight     The implementation generates all coordinate triplets within the inclusive bounds of the cuboid dimensions and filters them based on the sum condition using a single list comprehension.
+# Interview   Before: "I would use three nested loops to iterate through the ranges and append valid coordinates to a list." After: "Using a list comprehension is more idiomatic in Python, achieving O(x*y*z) time complexity while ensuring all coordinates within the inclusive range [0, x], [0, y], and [0, z] are evaluated against the sum constraint n."
+# Pitfalls    (1) Using range(x) instead of range(x + 1) excludes the upper bound dimension specified in the problem.  (2) Failing to account for the inclusive nature of the coordinate ranges leads to missing valid permutations.
 # ──────────────────────────────────────────────────
 
 if __name__ == '__main__':
