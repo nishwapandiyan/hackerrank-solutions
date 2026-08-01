@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-03-09, 09:50 p.m.
+# Technique   range-loop-end-suppression
+# Time        O(n)
+# Space       O(1)
+# Insight     The implementation iterates from one to n inclusive, printing each integer sequentially without a trailing newline or space by overriding the default end parameter.
+# Interview   Before: "How would you print a sequence of numbers as a single string without using string concatenation?" After: "By using the print function's end parameter set to an empty string, we achieve O(n) time complexity, effectively concatenating the output stream for any integer n."
+# Pitfalls    (1) Using the default print end parameter adds a newline character after every integer, violating the requirement to print as a single string.  (2) Using range(n) instead of range(1, n + 1) results in printing from zero to n-1, failing to include the integer n.
 # ──────────────────────────────────────────────────
 
 if __name__ == '__main__':
