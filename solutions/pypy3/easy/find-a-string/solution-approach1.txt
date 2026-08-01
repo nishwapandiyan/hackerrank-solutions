@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-03-11, 05:53 p.m.
+# Technique   sliding-window-substring-match
+# Time        O(N*M)
+# Space       O(M)
+# Insight     The algorithm iterates through all possible starting positions of the substring within the main string, checking for equality at each window of length equal to the substring.
+# Interview   Before: "I should use string.count() to find the occurrences." After: "The problem requires overlapping matches, which string.count() does not support. This O(N*M) sliding window approach correctly handles overlapping substrings by checking every index up to len(string) - len(sub_string)."
+# Pitfalls    (1) Using the built-in string.count() method, which fails to count overlapping occurrences as required by the problem.  (2) Incorrectly setting the loop range to len(string) instead of len(string) - len(sub_string) + 1, causing index out of bounds errors.  (3) Failing to account for case-sensitivity, which is explicitly required by the problem statement.
 # ──────────────────────────────────────────────────
 
 def count_substring(string, sub_string):
