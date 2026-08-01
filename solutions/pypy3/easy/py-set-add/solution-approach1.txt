@@ -1,0 +1,17 @@
+# ──────────────────────────────────────────────────
+# Link        https://www.hackerrank.com/challenges/py-set-add/problem?isFullScreen=true
+# Problem     Set .add() 
+# Difficulty  Easy
+# Subdomain   Sets
+# Platform    HackerRank
+# Language    pypy3
+# Status      Accepted
+# Submitted   2026-03-09, 10:22 p.m.
+# ──────────────────────────────────────────────────
+
+n = int(input())
+Set = set()
+for i in range(0,n):
+    name = input()
+    Set.add(name)
+print(len(Set))    
