@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-03-10, 11:22 p.m.
+# Technique   f-string-interpolation
+# Time        O(N+M)
+# Space       O(N+M)
+# Insight     The function utilizes Python f-string formatting to concatenate the provided first and last name strings into the required output template.
+# Interview   Before: "How do I combine these strings with specific text?" After: "I used an f-string to format the output in O(N+M) time, where N and M are the lengths of the first and last names, ensuring the exact punctuation required by the prompt is preserved."
+# Pitfalls    (1) Failing to include the exclamation mark before the phrase 'You just delved into python.' as specified in the output format.  (2) Adding extra spaces or omitting the required space between the first name, last name, and the exclamation mark.
 # ──────────────────────────────────────────────────
 
 #
