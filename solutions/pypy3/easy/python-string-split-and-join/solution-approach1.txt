@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-03-10, 11:15 p.m.
+# Technique   split-and-join-string-methods
+# Time        O(n)
+# Space       O(n)
+# Insight     The implementation utilizes Python's built-in string methods to tokenize the input by whitespace and reconstruct it using a hyphen delimiter.
+# Interview   Before: "How would you replace spaces with hyphens in a string?" After: "I used split() and join() to achieve this in O(n) time, where n is the string length, ensuring all whitespace sequences are handled correctly."
+# Pitfalls    (1) Using split(' ') instead of split() would incorrectly handle multiple consecutive spaces by creating empty strings in the resulting list.  (2) Assuming the input string contains no leading or trailing whitespace when using split(' ') instead of the default split() method.
 # ──────────────────────────────────────────────────
 
 
