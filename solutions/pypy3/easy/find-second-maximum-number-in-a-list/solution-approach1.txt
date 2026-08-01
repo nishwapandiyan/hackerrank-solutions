@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-03-10, 05:49 p.m.
+# Technique   set-deduplication-and-sorting
+# Time        O(N log N)
+# Space       O(N)
+# Insight     The implementation converts the input sequence into a set to remove duplicate scores, sorts the unique values in ascending order, and selects the second-to-last element as the runner-up.
+# Interview   Before: "I could iterate through the list to track the maximum and second maximum." After: "Using a set to filter duplicates followed by sorting is more concise, achieving O(N log N) time complexity, which is efficient for the given constraints."
+# Pitfalls    (1) The code assumes the input contains at least two distinct scores, as accessing index -2 on a set with fewer than two elements raises an IndexError.  (2) Using sorted() on a set creates a new list, which consumes O(N) additional space.
 # ──────────────────────────────────────────────────
 
 if __name__ == '__main__':
