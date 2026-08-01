@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-03-11, 05:27 p.m.
+# Technique   hash-map-lookup-average
+# Time        O(N + M)
+# Space       O(N * M)
+# Insight     The implementation maps student names to lists of floating-point scores in a dictionary, then computes the arithmetic mean of the target student's scores using the sum and length functions.
+# Interview   Before: "How would you calculate the average of a list of scores for a specific student?" After: "I would store the data in a dictionary for O(1) average-case lookup, then compute the mean in O(M) time, where M is the number of scores for that student."
+# Pitfalls    (1) Failing to format the output to exactly two decimal places using f-string formatting.  (2) Assuming the input scores are integers when the problem requires floating-point precision.  (3) Neglecting to handle the case where the student name might not exist in the dictionary.
 # ──────────────────────────────────────────────────
 
 if __name__ == '__main__':
