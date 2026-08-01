@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-03-10, 11:13 p.m.
+# Technique   built-in-string-method
+# Time        O(n)
+# Space       O(n)
+# Insight     The implementation leverages the native Python string method to perform a single-pass transformation of character casing.
+# Interview   Before: "I would iterate through the string and check each character's case manually." After: "Using the built-in swapcase method is more idiomatic and efficient, achieving O(n) time complexity while handling all Unicode characters correctly."
+# Pitfalls    (1) Assuming manual iteration is required when a built-in method exists.  (2) Overlooking that the method handles non-alphabetic characters by leaving them unchanged.
 # ──────────────────────────────────────────────────
 
 def swap_case(s):
